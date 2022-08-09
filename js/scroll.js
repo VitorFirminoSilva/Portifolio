@@ -1,5 +1,5 @@
 const navMenu = document.querySelectorAll('.navigation li a');
-const goTopBTN = document.querySelector('scrollUp');
+const goTopBTN = document.querySelector('.scrollUp');
 
 const getComponenteDistance = (element) => {
 	const id = element.getAttribute("href");
@@ -40,8 +40,16 @@ const smoothScrollTo = (endX, endY, duration) => {
 const clickMenu = (event) => {
 	event.preventDefault();
 
-	const distanceComponente = getComponenteDistance(event.target);
-	smoothScrollTo(0, distanceComponente, 800);
+	if(!event.target.classList.contains("active")){
+		navMenu.forEach((element) => {
+			element.classList.remove("active");
+		});
+
+		const distanceComponente = getComponenteDistance(event.target);
+		smoothScrollTo(0, distanceComponente, 800);
+
+		event.target.classList.add("active");
+	}
 };
 
 navMenu.forEach((element) => {
@@ -50,9 +58,10 @@ navMenu.forEach((element) => {
 
 /*BTN SCROLL TOP*/
 const activeBtn = () => {
-	const startX = window.scrollX || window.pageXOffset;
 
-	if(startX > 20){
+	const startY = window.scrollY || window.pageYOffset;
+
+	if(startY > 600){
 		goTopBTN.style.display = "block";
 	} else {
 		goTopBTN.style.display = "none";
@@ -60,10 +69,13 @@ const activeBtn = () => {
 }
 
 const scrollUp = () => {
-	
+	const component = document.querySelector("#about").offsetTop;
+	smoothScrollTo(0, component, 800);
 };
 
 goTopBTN.addEventListener("click", scrollUp);
 
-window.addEventListener("scroll", activeBtn);
+
+
+document.addEventListener("scroll", activeBtn);
 /*BTN SCROLL TOP*/

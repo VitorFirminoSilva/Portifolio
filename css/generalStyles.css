@@ -61,6 +61,7 @@ nav .navbar .home{
 
 .navigation{
     display: flex;
+    gap: 5px;
 }
 
 .navigation li{
@@ -79,6 +80,11 @@ nav .navbar .home{
 
 .navigation li a:hover{
 	background: rgba(0,0,0, 0.3);
+}
+
+.active{
+    background: rgba(0,0,0, 0.3);
+    font-weight: 600;
 }
 
 /* Scroll Top */
