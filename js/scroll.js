@@ -37,28 +37,67 @@ const smoothScrollTo = (endX, endY, duration) => {
 	}, 1000 / 60);
 }
 
+
 const clickMenu = (event) => {
 	event.preventDefault();
 
 	if(!event.target.classList.contains("active")){
+		const distanceComponente = getComponenteDistance(event.target);
+		smoothScrollTo(0, distanceComponente, 1000);
+
 		navMenu.forEach((element) => {
 			element.classList.remove("active");
 		});
 
-		const distanceComponente = getComponenteDistance(event.target);
-		smoothScrollTo(0, distanceComponente, 800);
-
 		event.target.classList.add("active");
+        
 	}
 };
 
 navMenu.forEach((element) => {
 	element.addEventListener("click", clickMenu);
-});
+}); 
 
-/*BTN SCROLL TOP*/
-const activeBtn = () => {
 
+const mainSections = document.querySelectorAll("main section[id]");
+
+const detectChangeSection = () => {
+	const windowY = window.scrollY || window.pageYOffset;
+
+    for (let y = 0; y < mainSections.length; y++) {
+		
+		const element = mainSections.item(y);
+
+		if(windowY >= element.offsetTop && windowY < ((element.offsetHeight * (y + 1)) -  (window.outerHeight / 2))){
+			return element;
+		}
+        
+    }
+};
+
+const applyActiveSection = () => {
+	const element = detectChangeSection();
+	if(element !== undefined){
+		const href = element.getAttribute("id");
+		
+		if(href === "home"){
+			navMenu.forEach((element) => {
+				element.classList.remove("active");
+			});
+		}else{
+
+			navMenu.forEach((element) => {
+				element.classList.remove("active");
+			});
+
+			const href = element.getAttribute("id");
+			document.querySelector(`.navigation li a[href^="#${href}"]`).classList.add("active");
+		}	
+	}
+};
+
+
+const activeButton = () => {
 	const startY = window.scrollY || window.pageYOffset;
 
 	if(startY > 600){
@@ -68,14 +107,15 @@ const activeBtn = () => {
 	}
 }
 
+const listenerScroll = () => {
+	applyActiveSection();
+	activeButton();
+};
+
 const scrollUp = () => {
-	const component = document.querySelector("#about").offsetTop;
-	smoothScrollTo(0, component, 800);
+	smoothScrollTo(0, 0, 800);
 };
 
 goTopBTN.addEventListener("click", scrollUp);
 
-
-
-document.addEventListener("scroll", activeBtn);
-/*BTN SCROLL TOP*/
+document.addEventListener("scroll", listenerScroll);
