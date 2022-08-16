@@ -43,15 +43,16 @@ nav .navbar{
     width: 95%;
     margin: 5px auto;
     padding: 0 10px;
-    
-    /*  */
-    border: 1px solid rgba(0,0,0,0.2);
-    box-shadow: 1px 0 20px 1px rgb(0 0 0 / 40%);
-    border-radius: 6px;
-    background-color: var(--primary-color);
-    position: fixed;
-    /*  */
 
+}
+
+.navbar_open{
+    animation: ditachNav 0.6s linear forwards;
+}
+
+
+nav{
+    background-color: var(--primary-color);
 }
 
 nav .navbar .home{

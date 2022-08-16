@@ -1,6 +1,8 @@
 const navMenu = document.querySelectorAll('.navigation li a');
 const goTopBTN = document.querySelector('.scrollUp');
 
+const navbar = document.querySelector('nav .navbar');
+
 const getComponenteDistance = (element) => {
 	const id = element.getAttribute("href");
 	return document.querySelector(id).offsetTop;
@@ -41,17 +43,9 @@ const smoothScrollTo = (endX, endY, duration) => {
 const clickMenu = (event) => {
 	event.preventDefault();
 
-	if(!event.target.classList.contains("active")){
-		const distanceComponente = getComponenteDistance(event.target);
-		smoothScrollTo(0, distanceComponente, 1000);
-
-		navMenu.forEach((element) => {
-			element.classList.remove("active");
-		});
-
-		event.target.classList.add("active");
-        
-	}
+	const distanceComponente = getComponenteDistance(event.target);
+	smoothScrollTo(0, distanceComponente, 1000);  
+	
 };
 
 navMenu.forEach((element) => {
@@ -75,30 +69,16 @@ const detectChangeSection = () => {
     }
 };
 
-const applyActiveSection = () => {
-	const element = detectChangeSection();
-	if(element !== undefined){
-		const href = element.getAttribute("id");
-		
-		if(href === "home"){
-			navMenu.forEach((element) => {
-				element.classList.remove("active");
-			});
-		}else{
-
-			navMenu.forEach((element) => {
-				element.classList.remove("active");
-			});
-
-			const href = element.getAttribute("id");
-			document.querySelector(`.navigation li a[href^="#${href}"]`).classList.add("active");
-		}	
-	}
-};
-
 
 const activeButton = () => {
 	const startY = window.scrollY || window.pageYOffset;
+
+	if(startY > 70){
+		navbar.classList.add("navbar_open");
+	}else{
+		navbar.classList.remove("navbar_open");
+		
+	}
 
 	if(startY > 600){
 		goTopBTN.style.display = "block";
@@ -108,7 +88,6 @@ const activeButton = () => {
 }
 
 const listenerScroll = () => {
-	applyActiveSection();
 	activeButton();
 };
 

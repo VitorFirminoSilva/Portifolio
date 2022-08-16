@@ -1,0 +1,14 @@
+@keyframes ditachNav {
+    from{
+        transform: translateY(-10px);
+    }
+    to{
+        
+            transform: translateY(0);
+            border: 1px solid rgba(0,0,0,0.2);
+            box-shadow: 1px 0 20px 1px rgb(0 0 0 / 40%);
+            border-radius: 6px;
+            background-color: var(--primary-color);
+            position: fixed;
+    }
+}
