@@ -2,7 +2,10 @@
     --primary-color: #0a192f;
     --secundary-color: #A8B2D1;
     --secundary-contrast: #E6F1FF;
-    --primari-contrast: #64FFDA;
+    --primary-contrast: #64FFDA;
+
+
+	--primary-contrast-opacity: #64ffdb17;
 }
 
 
@@ -15,7 +18,5 @@
 	blue: #5CC4C4;
 	red: #C36655;
 	gray3: #6D8377;
-
-
 
 */

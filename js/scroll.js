@@ -74,9 +74,9 @@ const activeButton = () => {
 	const startY = window.scrollY || window.pageYOffset;
 
 	if(startY > 70){
-		navbar.classList.add("navbar_open");
+		navbar.classList.add("navbar-fixed");
 	}else{
-		navbar.classList.remove("navbar_open");
+		navbar.classList.remove("navbar-fixed");
 		
 	}
 
