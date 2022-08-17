@@ -27,6 +27,15 @@ section .content{
     max-width: 1024px;
 }
 
+section#about .content{
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    max-width: 1024px; 
+    justify-content: space-between;
+} 
+
 
 /* SECTIONS FIXED */
 #home, #about, #experience, #project, #contact{
@@ -58,8 +67,42 @@ p, span{
 
 p{
     text-align: justify;
-    margin: 40px 0;
+    margin: 20px 0;
     max-width: 50rem;
+}
+
+.ul-tec-flex{
+    display: flex;
+    gap: 40px;
+    margin-left: 30px;
+
+    color: var(--secundary-color);
+}
+
+.ul-tec-flex ul {
+    list-style: none;
+}
+
+.ul-tec-flex ul li{
+    position: relative;
+    padding-left: 15px;
+}
+
+.ul-tec-flex ul li::before{
+    content: "▢";
+    position: absolute;
+    left: 0px;
+    color: var(--primary-contrast);
+    font-size: 1.6rem;
+} 
+
+
+.content-img{
+    max-width: 400px;
+}
+
+.content-img .img-about{
+    width: 300px;
 }
 
 /*TEXT*/
@@ -69,6 +112,7 @@ nav{
     display: flex;
     justify-content: center;
     max-width: 2048px;
+    z-index: 1;
 }
 
 nav .navbar{
