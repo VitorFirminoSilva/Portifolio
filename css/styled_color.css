@@ -1,0 +1,58 @@
+.dark{
+    background-color: var(--primary-color-dark); 
+}
+
+.navbar-dark{
+    background-color: var(--primary-color-dark);
+    color: var(--primary-font-color-dark);
+}
+
+.navbar-dark .nav-item{
+    color: var(--primary-font-color-dark);
+}
+
+.dark .btn{
+    border: 1px solid var(--primary-font-color-dark);
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--primary-font-color-dark);
+}
+
+.dark .btn:hover{
+    background-color: var(--primary-font-color-dark-op10);
+}
+
+.dark h1{
+    color: var(--tertiary-font-color-dark);
+}
+
+.dark h2{
+    color: var(--primary-font-color-dark);
+}
+
+.dark h3, p, span, li{
+    color: var(--secundary-font-color-dark);
+}
+
+
+.dark .content-img .content-svg svg{
+    fill: var(--primary-font-color-dark);
+}
+
+
+
+.btn-sm{
+    width: 20rem;
+}
+
+.btn-lg{
+    width: 35rem;
+}
+
+.btn-xg{
+    width: 55rem;
+}
+
+.btn-block{
+    width: 100%;
+}
+

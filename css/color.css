@@ -1,11 +1,17 @@
 :root{
-    --primary-color: #0a192f;
-    --secundary-color: #A8B2D1;
-    --secundary-contrast: #E6F1FF;
-    --primary-contrast: #64FFDA;
 
+	/* Dark Theme INIT */
+		--primary-color-dark: #0a192f;
+		
+		/* FONT CONTRAST */
+		--primary-font-color-dark: #64FFDA;
+		--secundary-font-color-dark: #A8B2D1;
+		--tertiary-font-color-dark: #E6F1FF;
 
-	--primary-contrast-opacity: #64ffdb17;
+		/*OPACITY COLORS*/
+		--primary-font-color-dark-op10: rgba(100, 255, 219, 0.1);
+
+	/* Dark Theme END */
 }
 
 

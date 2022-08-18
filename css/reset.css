@@ -16,6 +16,15 @@ body{
     font-size: 1.6rem;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
+ul li{
+    list-style: none;
+}
+
 
 /*SCROLL STYLE*/
 *::-webkit-scrollbar {
