@@ -2,6 +2,8 @@
 
 	/* Dark Theme INIT */
 		--primary-color-dark: #0a192f;
+
+		--primary-color-light-dark: #172a45;
 		
 		/* FONT CONTRAST */
 		--primary-font-color-dark: #64FFDA;
