@@ -38,6 +38,14 @@
     fill: var(--primary-font-color-dark);
 }
 
+.dark .card-title{
+    color: var(--primary-font-color-dark);
+}
+
+.dark .card-tag{
+    background-color: var(--primary-color-dark);
+}
+
 .btn-sm{
     width: 20rem;
 }

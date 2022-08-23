@@ -19,6 +19,8 @@ nav .navbar{
     width: 95%;
     margin: 2px auto;
     padding: 10px 10px;
+    position: fixed;
+
 }
 
 .navbar-fixed{
@@ -26,7 +28,6 @@ nav .navbar{
     box-shadow: 1px 0 20px 1px rgb(0 0 0 / 40%);
     border-radius: 6px;
     background-color: var(--primary-color);
-    position: fixed;
 }
 
 .home-link{
@@ -106,10 +107,14 @@ section .content{
     margin-top: 120px;
 }
 
-section#about .content{
-    flex-direction: row;
-    justify-content: space-between;
-} 
+.content-group{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    width: 100%;
+    gap: 20px;
+}
+
 /* SECTIONS END */
 
 
@@ -164,14 +169,13 @@ p{
     justify-content: flex-start;
     align-items: center;
 
-    margin-top: 60px;
+    margin-top: 20px;
 }
 
 .content-img .img-about{
     width: 40%;
     aspect-ratio: 3/4;
-    max-width: 600px;
-
+    max-width: 300px;
     border-radius: 20%;
 }
 
@@ -217,6 +221,18 @@ p{
     height: 200px;
 }
 
+.card-title{
+    font-size: 1.8rem;
+}
 
+.card-tag-list{
+    display: flex;
+    gap: 10px;
+}
 
+.card-tag{
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 5px;
+}
 /* CARD END */

@@ -1,9 +1,11 @@
-const navMenu = document.querySelectorAll('.navigation li a');
-const goTopBTN = document.querySelector('.scrollUp');
+const link = document.querySelectorAll('a.link');
+
+const goTopBTN = document.querySelector('.scroll-up');
 
 const navbar = document.querySelector('nav .navbar');
 
 const getComponenteDistance = (element) => {
+	console.log(element)
 	const id = element.getAttribute("href");
 	return document.querySelector(id).offsetTop;
 };
@@ -48,7 +50,7 @@ const clickMenu = (event) => {
 	
 };
 
-navMenu.forEach((element) => {
+link.forEach((element) => {
 	element.addEventListener("click", clickMenu);
 }); 
 
@@ -95,6 +97,6 @@ const scrollUp = () => {
 	smoothScrollTo(0, 0, 800);
 };
 
-goTopBTN.addEventListener("click", scrollUp);
+//goTopBTN.addEventListener("click", scrollUp);
 
 document.addEventListener("scroll", listenerScroll);
