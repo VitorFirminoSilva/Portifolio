@@ -34,8 +34,14 @@
 }
 
 
-.dark .content-img .content-svg svg{
+.dark .svg-fill{
+    stroke: none;
     fill: var(--primary-font-color-dark);
+}
+
+.dark .svg-stroke{
+    fill: none;
+    stroke: var(--primary-font-color-dark);
 }
 
 .dark .card-title{
