@@ -241,13 +241,14 @@ p{
 }
 
 .card-buttons{
-    display: flex;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     align-items: center;
     justify-content: center;
     margin-top: 10px;
     gap: 20px;
     font-size: 1.8rem;
-    flex-wrap: wrap;
 }
 
 .card-buttons svg{

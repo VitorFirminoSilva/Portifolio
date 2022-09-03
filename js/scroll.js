@@ -1,11 +1,10 @@
-const link = document.querySelectorAll('a.link');
+const link = document.querySelectorAll('a.internal-link');
 
 const goTopBTN = document.querySelector('.scroll-up');
 
 const navbar = document.querySelector('nav .navbar');
 
 const getComponenteDistance = (element) => {
-	console.log(element)
 	const id = element.getAttribute("href");
 	return document.querySelector(id).offsetTop;
 };
