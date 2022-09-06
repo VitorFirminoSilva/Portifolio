@@ -42,7 +42,7 @@
                 L 0 60Z" 
         />
         <path 
-            transform="translate(123,130) rotate(38)" 
+            transform="translate(122,131) rotate(37)" 
 
             d=" M 1 1 
                 C 0 0 38 35 38 60 
@@ -54,7 +54,7 @@
         />
 
         <path 
-            transform="translate(127,131) rotate(-38)" 
+            transform="translate(128,131) rotate(-37)" 
 
             d=" M 1 1 
                 C 0 0 38 35 38 60 

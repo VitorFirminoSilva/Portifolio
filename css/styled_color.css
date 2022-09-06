@@ -1,70 +1,58 @@
-.dark{
-    background-color: var(--primary-color-dark); 
+body{
+    background-color: var(--primary-color); 
 }
 
-.navbar-dark{
-    background-color: var(--primary-color-dark);
-    color: var(--primary-font-color-dark);
+.navbar{
+    background-color: var(--primary-color);
+    color: var(--primary-font-color);
 }
 
-.navbar-dark .nav-item{
-    color: var(--primary-font-color-dark);
+.navbar .nav-item{
+    color: var(--primary-font-color);
 }
 
-.dark .btn{
-    border: 1px solid var(--primary-font-color-dark);
+.btn{
+    border: 1px solid var(--primary-font-color);
     background-color: rgba(0, 0, 0, 0);
-    color: var(--primary-font-color-dark);
+    color: var(--primary-font-color);
 }
 
-.dark .btn:hover{
-    background-color: var(--primary-font-color-dark-op10);
+.btn:hover{
+    background-color: var(--primary-font-color-op10);
 }
 
-.dark h1{
-    color: var(--tertiary-font-color-dark);
+h1{
+    color: var(--tertiary-font-color);
 }
 
-.dark h2{
-    color: var(--primary-font-color-dark);
+h2{
+    color: var(--primary-font-color);
 }
 
-.dark h3, p, span, li{
-    color: var(--secundary-font-color-dark);
+h3, p, span, li{
+    color: var(--secundary-font-color);
 }
 
 
-.dark .svg-fill{
+.svg-fill{
     stroke: none;
-    fill: var(--primary-font-color-dark);
+    fill: var(--primary-font-color);
 }
 
-.dark .svg-stroke{
+.svg-stroke{
     fill: none;
-    stroke: var(--primary-font-color-dark);
+    stroke: var(--primary-font-color);
 }
 
-.dark .card-title{
-    color: var(--primary-font-color-dark);
+.card-title{
+    color: var(--primary-font-color);
 }
 
-.dark .card-tag{
-    background-color: var(--primary-color-dark);
+.card-tag{
+    background-color: var(--primary-color);
 }
 
-.btn-sm{
-    width: 20rem;
-}
-
-.btn-lg{
-    width: 35rem;
-}
-
-.btn-xg{
-    width: 55rem;
-}
-
-.btn-block{
-    width: 100%;
+.card{
+    background-color: var(--primary-color-light);
 }
 

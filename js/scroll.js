@@ -74,12 +74,12 @@ const detectChangeSection = () => {
 const activeButton = () => {
 	const startY = window.scrollY || window.pageYOffset;
 
-	if(startY > 70){
+	/*if(startY > 70){
 		navbar.classList.add("navbar-fixed");
 	}else{
 		navbar.classList.remove("navbar-fixed");
 		
-	}
+	}*/
 
 	if(startY > 600){
 		goTopBTN.style.display = "block";
