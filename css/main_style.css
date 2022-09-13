@@ -1,4 +1,4 @@
-body{
+body {
     display: flex;
     flex-direction: column;
     margin: 0 20px;
@@ -6,12 +6,12 @@ body{
 
 
 /* NAVBAR INIT */
-header{
+header {
     display: flex;
     justify-content: center;
 }
 
-header .navbar{
+header .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,45 +24,46 @@ header .navbar{
 
 }
 
-.navbar-fixed{
-    border: 1px solid rgba(0,0,0,0.2);
+.navbar-fixed {
+    border: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 1px 0 20px 1px rgb(0 0 0 / 40%);
     border-radius: 6px;
     background-color: var(--primary-color);
 }
 
-.home-link{
+.home-link {
     font-size: 2.4rem;
     margin-left: 20px;
     padding: 15px 2rem;
     text-decoration: none;
 }
 
-.navigation{
+.navigation {
     display: flex;
     gap: 5px;
 }
 
-.navigation li a{
-	text-decoration: none;
+.navigation li a {
+    text-decoration: none;
     font-family: Arial;
-	font-size: 1.8rem;
-	padding: 2.1rem;
-	transition: all 250ms linear 0s;
+    font-size: 1.8rem;
+    padding: 2.1rem;
+    transition: all 250ms linear 0s;
 }
 
-.navigation li a svg{
-	width: 1.8rem;
+.navigation li a svg {
+    width: 1.8rem;
 }
 
-.link:hover{
-	background: rgba(0,0,0, 0.3); 
+.link:hover {
+    background: rgba(0, 0, 0, 0.3);
 }
+
 /* NAVBAR END */
 
 
 /* BUTTONS INIT */
-.btn{
+.btn {
     display: flex;
     text-decoration: none;
     text-align: center;
@@ -75,7 +76,7 @@ header .navbar{
 }
 
 
-.scroll-up{
+.scroll-up {
     display: block;
     position: fixed;
     bottom: 20px;
@@ -84,7 +85,7 @@ header .navbar{
     opacity: 0.6;
 }
 
-.scroll-up:hover{
+.scroll-up:hover {
     opacity: 1;
 }
 
@@ -92,20 +93,20 @@ header .navbar{
 
 
 /* SECTIONS INIT */
-main{
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-section{
+section {
     display: flex;
     justify-content: center;
     width: 100%;
     min-height: 100vh;
 }
 
-section .content{
+section .content {
     display: flex;
     flex-direction: column;
 
@@ -113,19 +114,19 @@ section .content{
     max-width: 1024px;
     gap: 20px;
 
-    /*margin-top: 120px;  Home not works*/ 
+    /*margin-top: 120px;  Home not works*/
 }
 
-section#home .content{
+section#home .content {
     justify-content: center;
     gap: 5px;
 }
 
-section#about .content{
+.mg-top {
     margin-top: 120px;
 }
 
-.content-group{
+.content-group {
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -139,36 +140,89 @@ section#about .content{
 
 /* TEXT STYLED INIT */
 
-h1{
+h1 {
     font-size: 6.8rem;
 }
 
-h2{
+h2 {
     font-size: 2.2rem;
 }
 
-h3{
+h3 {
     font-size: 2.8rem;
 }
 
-p{
+p {
     text-align: justify;
     margin: 20px 0;
     max-width: 50rem;
 }
-.content-text{
+
+.content-text {
     margin: 0 auto;
     font-size: 2rem;
 }
 
-.tec-list{
-    margin-top: 20px;
+
+/* List tech INIT */
+
+.tec-list {
     display: grid;
-    overflow: hidden;
-    grid-template-columns: repeat(2, minmax(140px, 200px));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 70px;
 }
 
-.tec-list li{
+.list-item {
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 30%;
+    position: relative;
+}
+
+.list-item:hover .tooltip {
+    display: block;
+    visibility: visible;
+}
+
+.list-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30%;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    visibility: hidden;
+
+    font-size: 1.6rem;
+    width: 100%;
+    background-color: var(--primary-color-light);
+    color: var(--primary-font-color);
+
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+    bottom: 100%;
+    left: 0;
+    margin-bottom: 5px;
+}
+
+.tooltip::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: var(--primary-color-light) transparent transparent transparent;
+    
+}
+
+
+/* .tec-list li{
     position: relative;
     padding-left: 15px;
 }
@@ -179,13 +233,14 @@ p{
     left: 0px;
     color: var(--primary-font-color-dark);
     font-size: 1.6rem;
-}
+} */
+/* List tech END */
 
 /* TEXT STYLED END */
 
 
 /* IMAGES AND SVGs INIT */
-.content-img{
+.content-img {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -194,7 +249,7 @@ p{
     margin-top: 20px;
 }
 
-.img-about{
+.img-about {
     width: 90%;
     aspect-ratio: 3/4;
     max-width: 300px;
@@ -202,19 +257,19 @@ p{
     position: relative;
 }
 
-.img-about img{
+.img-about img {
     width: 90%;
     height: 90%;
     border-radius: 6%;
 }
 
-.img-about::before{
+.img-about::before {
     content: '';
     width: 90%;
     height: 92%;
     position: absolute;
     border: 10px solid var(--primary-font-color-op60);
-    background-color: rgba(0,0,0, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 6%;
     transform: translate(16px, -2px);
     z-index: -1;
@@ -222,7 +277,7 @@ p{
 
 
 
-.content-img .content-svg{
+.content-img .content-svg {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -230,55 +285,56 @@ p{
     gap: 20px;
 }
 
-.content-img .content-svg svg{
+.content-img .content-svg svg {
     width: 3.8rem;
 }
+
 /* IMAGES AND SVGs END */
 
 
 
 /* CARD INIT */
-.card-list{
+.card-list {
     margin: 10px 0;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-	grid-gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 30px;
 }
 
-.card{
+.card {
     padding: 20px;
     width: 100%;
-  
+
     display: flex;
     flex-direction: column;
     border-radius: 4px;
 }
 
-.card-content{
+.card-content {
     margin-top: 10px;
 }
 
-.card-img img{
+.card-img img {
     width: 100%;
 }
 
-.card-tag-list{
+.card-tag-list {
     display: flex;
     gap: 10px;
 }
 
-.card-tag{
+.card-tag {
     font-weight: 600;
     border-radius: 4px;
     padding: 5px;
 }
 
-.card-title{
+.card-title {
     text-align: center;
     font-size: 2rem;
 }
 
-.card-buttons{
+.card-buttons {
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -289,25 +345,25 @@ p{
     font-size: 1.8rem;
 }
 
-.card-buttons svg{
+.card-buttons svg {
     width: 1.8rem;
 }
+
 /* CARD END */
 
 
-.btn-sm{
+.btn-sm {
     width: 20rem;
 }
 
-.btn-lg{
+.btn-lg {
     width: 35rem;
 }
 
-.btn-xg{
+.btn-xg {
     width: 55rem;
 }
 
-.btn-block{
+.btn-block {
     width: 100%;
 }
-
