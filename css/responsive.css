@@ -1,6 +1,41 @@
-@media (max-width: 630px) {
+@media (max-width: 870px) {
 	
-	nav{
+
+	.home-link, .text-link{
+		display: none;
+	}
+
+	header .navbar{
+		display: flex;
+    	align-items: center;
+		justify-content: center;
+    	
+		width: auto;
+    	margin: 2px auto;
+    	padding: 10px 20px;
+    	position: fixed;
+    	z-index: 1;
+
+		bottom: 5px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.nav-item{
+		display: flex;
+	}
+
+	.navigation .nav-item svg{
+		width: 3rem;
+	}
+
+	.mg-top {
+		margin-top: 20px;
+		margin-bottom: 80px;
+	}
+
+
+	/* nav{
 		display: none;
 	}
 	
@@ -71,7 +106,7 @@
 		font-size: 3rem;
 		line-height: 4rem;
 		display: block;
-	}
+	} */
 	
 }
 

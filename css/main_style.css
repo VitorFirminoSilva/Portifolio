@@ -40,18 +40,20 @@ header .navbar {
 
 .navigation {
     display: flex;
+    align-items: center;
     gap: 5px;
 }
 
-.navigation li a {
+.nav-item {
     text-decoration: none;
     font-family: Arial;
     font-size: 1.8rem;
-    padding: 2.1rem;
+    padding: 1rem;
     transition: all 250ms linear 0s;
 }
 
-.navigation li a svg {
+.navigation svg {
+    vertical-align: text-bottom;
     width: 1.8rem;
 }
 
