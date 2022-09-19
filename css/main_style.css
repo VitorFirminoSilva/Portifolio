@@ -308,7 +308,7 @@ p {
 .card-tag-list {
     display: flex;
     gap: 10px;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 
 .card-tag {
