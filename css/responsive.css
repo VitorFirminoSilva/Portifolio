@@ -3,6 +3,7 @@
 
 	.home-link, .text-link{
 		display: none;
+		pointer-events: none;
 	}
 
 	header .navbar{
@@ -23,16 +24,11 @@
 	}
 
 	.nav-item{
-		display: flex;
-	}
-
-	.navigation .nav-item{
 		border-radius: 6px;
 	}
 
-	.navigation .nav-item svg{
-		width: 3rem;
-		
+	.svg-nav{
+		width: 3rem;	
 	}
 
 	.mg-top {

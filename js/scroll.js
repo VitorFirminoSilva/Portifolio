@@ -1,7 +1,5 @@
 const link = document.querySelectorAll('a.internal-link');
 
-const goTopBTN = document.querySelector('.scroll-up');
-
 const navbar = document.querySelector('nav .navbar');
 
 const getComponenteDistance = (element) => {
@@ -43,7 +41,6 @@ const smoothScrollTo = (endX, endY, duration) => {
 
 const clickMenu = (event) => {
 	event.preventDefault();
-
 	const distanceComponente = getComponenteDistance(event.target);
 	smoothScrollTo(0, distanceComponente, 1000);  
 	
@@ -69,33 +66,3 @@ const detectChangeSection = () => {
         
     }
 };
-
-
-const activeButton = () => {
-	const startY = window.scrollY || window.pageYOffset;
-
-	/*if(startY > 70){
-		navbar.classList.add("navbar-fixed");
-	}else{
-		navbar.classList.remove("navbar-fixed");
-		
-	}*/
-
-	if(startY > 600){
-		goTopBTN.style.display = "block";
-	} else {
-		goTopBTN.style.display = "none";
-	}
-}
-
-const listenerScroll = () => {
-	activeButton();
-};
-
-const scrollUp = () => {
-	smoothScrollTo(0, 0, 800);
-};
-
-//goTopBTN.addEventListener("click", scrollUp);
-
-document.addEventListener("scroll", listenerScroll);

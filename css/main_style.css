@@ -45,6 +45,8 @@ header .navbar {
 }
 
 .nav-item {
+    display: flex;
+    gap: 5px;
     text-decoration: none;
     font-family: Arial;
     font-size: 1.8rem;
@@ -52,13 +54,19 @@ header .navbar {
     transition: all 250ms linear 0s;
 }
 
-.navigation svg {
+
+.svg-nav {
     vertical-align: text-bottom;
     width: 1.8rem;
+    pointer-events: none;
 }
 
 .link:hover {
     background: rgba(0, 0, 0, 0.3);
+}
+
+.text-link{
+    pointer-events: none;
 }
 
 /* NAVBAR END */
@@ -75,20 +83,6 @@ header .navbar {
     font-size: 1.8rem;
     align-content: center;
     justify-content: space-around;
-}
-
-
-.scroll-up {
-    display: block;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    opacity: 0.6;
-}
-
-.scroll-up:hover {
-    opacity: 1;
 }
 
 /* BUTTONS END */
